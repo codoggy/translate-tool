@@ -25,3 +25,24 @@ sudo systemctl status nginx --no-pager
 ss -lntp | grep nginx
 
 
+
+
+
+
+
+
+
+
+server {
+    listen 8080;
+
+    location / {
+        proxy_pass http://127.0.0.1:11434;
+        proxy_http_version 1.1;
+
+        add_header Access-Control-Allow-Origin *;
+        add_header Access-Control-Allow-Headers *;
+        add_header Access-Control-Allow-Methods *;
+    }
+}
+
