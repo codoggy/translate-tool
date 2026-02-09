@@ -46,3 +46,21 @@ server {
     }
 }
 
+
+
+
+
+
+
+sudo sed -i 's/listen 8000;/listen 8080;/' /etc/nginx/sites-available/translate-tool
+
+sudo nginx -t
+sudo systemctl reload nginx
+
+
+ss -lntp | grep nginx
+
+
+http://10.6.101.7:8080/
+
+
