@@ -17,3 +17,11 @@ sudo nginx -t
 sudo systemctl reload nginx
 sudo ufw allow 8000
 
+
+
+
+
+sudo systemctl status nginx --no-pager
+ss -lntp | grep nginx
+
+
